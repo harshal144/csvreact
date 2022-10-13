@@ -2,6 +2,8 @@ import "./App.css";
 import { useState } from "react";
 import Papa from "papaparse";
 
+const port=process.env.PORT ||8000;
+
 function App() {
   // State to store parsed data
   const [parsedData, setParsedData] = useState([]);
@@ -75,5 +77,8 @@ function App() {
     </div>
   );
 }
+app.listen(port,()=>{
+  console.log(`listing to the port no at ${PORT}`);
+})
 
 export default App;
